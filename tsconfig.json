@@ -13,7 +13,7 @@
     "resolveJsonModule": true
   },
   "include": [
-    "components",
+    "src",
     "global.d.ts"
   ],
   "exclude": [
