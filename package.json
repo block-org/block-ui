@@ -1,6 +1,6 @@
 {
   "name": "block-ui",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "license": "MIT",
@@ -16,7 +16,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:update": "jest --updateSnapshot"
+    "test:update": "jest --updateSnapshot",
+    "release": "npx ts-node ./scripts/release.ts"
   },
   "lint-staged": {
     "components/**/*.ts?(x)": [
@@ -60,11 +61,15 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^12.1.2",
+    "@types/inquirer": "^8.1.3",
     "@types/jest": "^27.0.3",
     "@types/react": "^17.0.35",
     "@types/react-dom": "^17.0.11",
+    "@types/semver": "^7.3.9",
     "@types/testing-library__react": "^10.2.0",
     "@umijs/fabric": "^2.8.1",
+    "chalk": "^5.0.0",
+    "child_process": "^1.0.2",
     "commitizen": "^4.2.4",
     "cpr": "^3.0.1",
     "cross-env": "^7.0.3",
@@ -78,15 +83,18 @@
     "gulp-less": "^5.0.0",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
+    "inquirer": "^8.2.0",
     "jest": "^27.4.3",
     "lint-staged": "^12.0.2",
     "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "semver": "^7.3.5",
     "serve": "^13.0.2",
     "through2": "^4.0.2",
     "ts-jest": "^27.1.0",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "util": "^0.12.4"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
