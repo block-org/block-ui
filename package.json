@@ -1,5 +1,5 @@
 {
-  "name": "block-ui",
+  "name": "@block-ui/react",
   "version": "0.0.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
@@ -49,6 +49,14 @@
     "lib/**/style/*",
     "*.less"
   ],
+  "files": [
+    "dist",
+    "esm",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
