@@ -110,7 +110,7 @@ const paths = {
     dist: 'dist',
   },
   styles: 'src/**/*.less',
-  scripts: ['src/**/*.{ts,tsx}', '!src/**/demo/*.{ts,tsx}'],
+  scripts: ['src/**/*.{ts,tsx}', '!src/**/demo/*.{ts,tsx}', '!src/**/__tests__/*.{ts,tsx}',],
 };
 
 // 串行执行编译脚本任务（cjs,esm） 避免环境变量影响
