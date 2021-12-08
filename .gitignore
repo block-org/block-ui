@@ -2,3 +2,4 @@ node_modules
 src/.umi
 esm
 lib
+yarn-error.log
