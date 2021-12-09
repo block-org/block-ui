@@ -13,11 +13,11 @@
     "resolveJsonModule": true
   },
   "include": [
-    "src",
+    "components",
     "global.d.ts"
   ],
   "exclude": [
     "node_modules",
-    "src/**/__tests__"
+    "components/**/__tests__"
   ]
 }
