@@ -1,5 +1,5 @@
 {
-  "name": "@block-ui/web-react",
+  "name": "@block-org/block-ui",
   "version": "0.0.0",
   "main": "lib/index.js",
   "module": "esm/index.js",
