@@ -8,6 +8,7 @@
     "commit": "git-cz",
     "clean": "rimraf lib esm dist",
     "build:types": "tsc -p tsconfig.build.json && cpr lib esm",
+    "build:esm": "block-scripts build:component:esm",
     "build": "npm run clean && npm run build:types && gulp",
     "test": "jest",
     "test:watch": "jest --watch",
