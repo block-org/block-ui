@@ -1,23 +1,30 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
-    "target": "esnext",
-    "module": "commonjs",
+    "outDir": "esm",
     "jsx": "react",
-    "declaration": true,
-    "declarationDir": "lib",
-    "strict": true,
+    "module": "es6",
+    "target": "es5",
+    "lib": [
+      "es5",
+      "dom"
+    ],
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "components",
-    "global.d.ts"
+    "components/**/*.ts",
+    "components/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
-    "components/**/__tests__"
+    "components/**/*.test.tsx",
+    "components/**/*.test.ts"
   ]
 }
