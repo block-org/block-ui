@@ -11,11 +11,12 @@
     "build": "npm run clean && npm run build:esm",
     "eslint": "eslint components/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
     "stylelint": "stylelint 'components/**/*.less'",
+    "formatter ": "prettier --config .prettierrc --write \"{stories,tests,components}/**/*.{js,jsx,ts,tsx}\"",
     "release": "npx ts-node ./scripts/release.ts"
   },
   "lint-staged": {
     "components/**/*.ts?(x)": [
-      "prettier --write",
+      "prettier --write --ignore-unknown",
       "eslint --fix",
       "jest --bail --findRelatedTests",
       "git add"
