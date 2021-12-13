@@ -7,17 +7,15 @@ const defaultProps: ConfigProviderProps = {
   size: 'default',
 };
 
-
 export const ConfigContext = createContext<ConfigProviderProps>({
   getPrefixCls: (componentName: string, customPrefix?: string) => {
-    return `${customPrefix || 'block'}-${componentName}`
+    return `${customPrefix || 'block'}-${componentName}`;
   },
   ...defaultProps,
 });
 
 function ConfigProvider(baseProps: ConfigProviderProps) {
-
-  return null
+  return null;
 }
 
 export const ConfigConsumer = ConfigContext.Consumer;

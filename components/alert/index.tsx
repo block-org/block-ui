@@ -92,11 +92,7 @@ function Alert(baseProps: AlertProps, ref) {
       }}
     >
       <div ref={ref} style={style} className={classNames}>
-        {
-          showIcon && (
-            <div className={`${prefixCls}-icon-wrapper`}>{renderIcon(type)}</div>
-          )
-        }
+        {showIcon && <div className={`${prefixCls}-icon-wrapper`}>{renderIcon(type)}</div>}
         <div className={`${prefixCls}-content-wrapper`}>
           {title && <div className={`${prefixCls}-title`}>{title}</div>}
           {content && <div className={`${prefixCls}-content`}>{content}</div>}
