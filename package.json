@@ -8,6 +8,7 @@
     "commit": "git-cz",
     "clean": "rimraf lib esm dist",
     "build:esm": "block-scripts build:component:esm",
+    "build:cjs": "block-scripts build:component:cjs",
     "build": "npm run clean && npm run build:esm",
     "eslint": "eslint components/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
     "stylelint": "stylelint 'components/**/*.less'",
