@@ -7,6 +7,7 @@
   "scripts": {
     "commit": "git-cz",
     "clean": "rimraf lib esm dist",
+    "build:css": "block-scripts build:component:css",
     "build:esm": "block-scripts build:component:esm",
     "build:cjs": "block-scripts build:component:cjs",
     "build": "npm run clean && npm run build:esm",
@@ -54,6 +55,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "@block-org/block-scripts": "^0.0.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@types/inquirer": "^8.1.3",
