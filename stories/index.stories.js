@@ -1,8 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
+// todo
 // import './index.less';
 // import '../dist/css/index.less';
+
+import '../esm/style/index.less';
+import '../esm/alert/style/index.less';
 
 import DemoAlert from './components/alert';
 

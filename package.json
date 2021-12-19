@@ -10,10 +10,11 @@
     "build:css": "block-scripts build:component:css",
     "build:esm": "block-scripts build:component:esm",
     "build:cjs": "block-scripts build:component:cjs",
-    "build": "npm run clean && npm run build:esm",
+    "build": "npm run clean && npm run build:esm && npm run build:css",
     "eslint": "eslint components/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
     "stylelint": "stylelint 'components/**/*.less'",
     "formatter ": "prettier --config .prettierrc --write \"{stories,tests,components}/**/*.{js,jsx,ts,tsx}\"",
+    "color": "node ./scripts/compileColors.js",
     "release": "npx ts-node ./scripts/release.ts",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -59,6 +60,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@block-org/block-scripts": "^0.0.2",
+    "@block-org/color": "^0.0.1",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@storybook/addon-actions": "^6.4.9",
