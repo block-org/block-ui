@@ -1,11 +1,10 @@
 import React, { useState, useContext, ReactNode, forwardRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
-// todo
-// import IconCheckCircleFill from '../../icon/react-icon/IconCheckCircleFill';
-// import IconCloseCircleFill from '../../icon/react-icon/IconCloseCircleFill';
-// import IconInfoCircleFill from '../../icon/react-icon/IconInfoCircleFill';
-// import IconExclamationCircleFill from '../../icon/react-icon/IconExclamationCircleFill';
-// import IconClose from '../../icon/react-icon/IconClose';
+import IconCheckCircleFill from '../../icon/react-icon/IconCheckCircleFill';
+import IconCloseCircleFill from '../../icon/react-icon/IconCloseCircleFill';
+import IconInfoCircleFill from '../../icon/react-icon/IconInfoCircleFill';
+import IconExclamationCircleFill from '../../icon/react-icon/IconExclamationCircleFill';
+import IconClose from '../../icon/react-icon/IconClose';
 import cs from '../_util/classNames';
 import { ConfigContext } from '../config-provider';
 import { AlertProps } from './interface';
@@ -48,17 +47,13 @@ function Alert(baseProps: AlertProps, ref) {
     }
     switch (type) {
       case 'info':
-        // return <IconInfoCircleFill />;
-        return 'info';
+        return <IconInfoCircleFill />;
       case 'success':
-        // return <IconCheckCircleFill />;
-        return 'success';
+        return <IconCheckCircleFill />;
       case 'warning':
-        // return <IconExclamationCircleFill />;
-        return 'warning';
+        return <IconExclamationCircleFill />;
       case 'error':
-        // return <IconCloseCircleFill />;
-        return 'error';
+        return <IconCloseCircleFill />;
       default:
         return null;
     }
@@ -100,8 +95,7 @@ function Alert(baseProps: AlertProps, ref) {
         {action && <div className={`${prefixCls}-action`}>{action}</div>}
         {_closable && (
           <button onClick={onHandleClose} className={`${prefixCls}-close-btn`}>
-            {/* {closeElement || <IconClose />} */}
-            {closeElement || 'iconclone'}
+            {closeElement || <IconClose />}
           </button>
         )}
       </div>
