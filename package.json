@@ -6,19 +6,21 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
+    "init": "./scripts/init.sh",
     "clean": "rimraf lib esm dist",
     "build:css": "block-scripts build:component:css",
     "build:esm": "block-scripts build:component:esm",
     "build:cjs": "block-scripts build:component:cjs",
     "build": "npm run clean && npm run build:esm && npm run build:css",
+    "color": "node ./scripts/compileColors.js",
+    "icon": "cd icon && rimraf react-icon/ && rimraf react-icon-cjs && cd build/ && node generate.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "eslint": "eslint components/ --fix --cache --quiet --ext .js,.jsx,.ts,.tsx",
     "stylelint": "stylelint 'components/**/*.less'",
     "formatter ": "prettier --config .prettierrc --write \"{stories,tests,components}/**/*.{js,jsx,ts,tsx}\"",
-    "color": "node ./scripts/compileColors.js",
-    "icon": "cd icon && rimraf react-icon/ && rimraf react-icon-cjs && cd build/ && node generate.js",
-    "release": "npx ts-node ./scripts/release.ts",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "prepublishOnly": "yarn icon && yarn build",
+    "release": "npx ts-node ./scripts/release.ts"
   },
   "lint-staged": {
     "components/**/*.ts?(x)": [
