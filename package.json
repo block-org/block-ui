@@ -55,7 +55,12 @@
   "files": [
     "dist",
     "esm",
-    "lib"
+    "lib",
+    "icon/react-icon",
+    "icon/react-icon-cjs",
+    "icon/index.js",
+    "icon/index.es.js",
+    "icon/index.d.ts"
   ],
   "publishConfig": {
     "access": "public"

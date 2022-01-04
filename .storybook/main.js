@@ -35,7 +35,7 @@ function getLoaderForStyle(isCssModule) {
 module.exports = {
   stories: ['../stories/index.stories.js'],
   webpackFinal: (config) => {
-    // config.resolve.alias['@self/icon'] = path.resolve(__dirname, '../icon');
+    config.resolve.alias['@self/icon'] = path.resolve(__dirname, '../icon');
     config.resolve.alias['@self'] = path.resolve(__dirname, '../esm');
 
     // config.resolve.modules = ['node_modules', path.resolve(__dirname, '../site/node_modules')];
