@@ -1163,10 +1163,10 @@
     "@babel/runtime" "^7.13.10"
     babel-plugin-import "^1.13.3"
 
-"@block-org/block-scripts@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@block-org/block-scripts/-/block-scripts-0.0.3.tgz#b730da38b98a61fb07d95b7c51950e3b5f554211"
-  integrity sha512-Om9k/T4NXyD3sWWw0up915iyTTrvTnRuXdFQr/6uZM1HZExDPUjHKAxksLc5/SCV5zY86V9FY5zfTlOzu74sIw==
+"@block-org/block-scripts@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@block-org/block-scripts/-/block-scripts-0.0.4.tgz#124b5807378269f913a769b9deea37596a0356ce"
+  integrity sha512-1CpDIL3VoKhG4sI5nHD9pTddJVc/oIuh3KUzV/atUgj1c7RejsGLb8bqqTEWyo1GauSqV3bnQVovJudSqqSd0w==
   dependencies:
     "@block-org/block-babel-config" "^0.0.1"
     "@svgr/webpack" "^4.2.0"
@@ -12986,9 +12986,9 @@ synchronous-promise@^2.0.15:
   integrity sha512-k8uzYIkIVwmT+TcglpdN50pS2y1BDcUnBPK9iJeGu0Pl1lOI8pD6wtzgw91Pjpe+RxtTncw32tLxs/R0yNL2Mg==
 
 table@^6.0.9, table@^6.7.5:
-  version "6.7.5"
-  resolved "https://registry.yarnpkg.com/table/-/table-6.7.5.tgz#f04478c351ef3d8c7904f0e8be90a1b62417d238"
-  integrity sha512-LFNeryOqiQHqCVKzhkymKwt6ozeRhlm8IL1mE8rNUurkir4heF6PzMyRgaTa4tlyPTGGgXuvVOF/OLWiH09Lqw==
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.8.0.tgz#87e28f14fa4321c3377ba286f07b79b281a3b3ca"
+  integrity sha512-s/fitrbVeEyHKFa7mFdkuQMWlH1Wgw/yEXMt5xACT4ZpzWFluehAxRtUUQKPuWhaLAWhFcVx6w3oC8VKaUfPGA==
   dependencies:
     ajv "^8.0.1"
     lodash.truncate "^4.4.2"
