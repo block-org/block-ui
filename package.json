@@ -72,7 +72,7 @@
     "@babel/core": "^7.16.5",
     "@babel/plugin-transform-runtime": "^7.16.5",
     "@babel/runtime": "^7.5.5",
-    "@block-org/block-scripts": "^0.0.4",
+    "@block-org/block-scripts": "^0.0.5",
     "@block-org/color": "^0.0.1",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
