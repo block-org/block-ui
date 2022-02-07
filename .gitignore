@@ -12,6 +12,7 @@ icon/react-icon-cjs/
 icon/index.d.ts
 icon/index.es.js
 icon/index.js
+components/style/theme/color/compiled-colors.less
 
 # Logs
 *.log
