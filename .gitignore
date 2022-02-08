@@ -4,7 +4,7 @@ node_modules
 
 # Bundle files
 esm
-lib
+/lib
 dist
 storybook-static/
 icon/react-icon/
