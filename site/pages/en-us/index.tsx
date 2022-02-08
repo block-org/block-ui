@@ -37,7 +37,7 @@ const Home: NextPage = () => {
             </a>
           </NextLink>
 
-          <NextLink href="/en-us/customization">
+          <NextLink href="/en-us/guide/themes">
             <a
               className={styles.card}
             >
