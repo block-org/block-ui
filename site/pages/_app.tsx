@@ -1,8 +1,15 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+// import Menu from '../lib/components/layout/menu'
+import '../styles/globals.css'
+import "@arco-design/web-react/dist/css/arco.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      {/* <Menu /> */}
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
