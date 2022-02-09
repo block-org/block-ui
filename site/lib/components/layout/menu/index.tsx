@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import MenuLinks from './menu-links'
 import MenuSticker from './menu-sticker'
 
 const Menu: React.FC<unknown> = () => {
@@ -13,8 +14,8 @@ const Menu: React.FC<unknown> = () => {
   useEffect(() => {
     const prefetch = async () => {
       const urls = isChinese
-        ? ['/zh-cn/guide/introduction', '/zh-cn/components/text', '/zh-cn/customization']
-        : ['/en-us/guide/introduction', '/en-us/components/text', '/en-us/customization']
+        ? ['/zh-cn/guide/introduction', '/zh-cn/components/button', '/zh-cn/guide/themes']
+        : ['/en-us/guide/introduction', '/en-us/components/button', '/en-us/guide/themes']
 
       await Promise.all(
         urls.map(async url => {
@@ -35,6 +36,7 @@ const Menu: React.FC<unknown> = () => {
 
   return (
     <div>
+      <MenuLinks />
       <MenuSticker />
     </div>
   )
