@@ -1,13 +1,16 @@
 import React, { useEffect, useMemo } from 'react'
 import { Tabs, Typography } from '@arco-design/web-react';
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import Metadatas from '../../../data'
 import useLocale from '../../../use-locale'
+import { useState } from 'react';
 
 const TabPane = Tabs.TabPane;
 
 const MenuSticker = () => {
   const { locale } = useLocale()
+  const { pathname } = useRouter()
+  const [activeTab, setActiveTab] = useState('');
 
   const tabbarData = useMemo(() => Metadatas[locale], [locale])
 
@@ -16,12 +19,30 @@ const MenuSticker = () => {
     Router.push(defaultPath)
   }
 
+  useEffect(() => {
+
+    if (pathname.includes('guide/themes')) {
+      setActiveTab('customization');
+      return;
+    } else if (pathname.includes('guide')) {
+      setActiveTab('guide');
+      return;
+    } else if (pathname.includes('components')) {
+      setActiveTab('components');
+      return;
+    } else {
+      setActiveTab('');
+      Router.push('/en-us/')
+      return;
+    }
+  }, [pathname]);
+
   return (
     <>
       <nav>
         <div className="sticker">
           <div className='inner'>
-            <Tabs defaultActiveTab='1' onChange={handleChange} className='inner-tabs'>
+            <Tabs defaultActiveTab='' activeTab={activeTab} onChange={handleChange} className='inner-tabs'>
               <TabPane key='' title='home' />
               {
                 tabbarData
