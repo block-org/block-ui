@@ -1,48 +1,34 @@
 import React, { useEffect, useMemo } from 'react'
 import { Tabs, Typography } from '@arco-design/web-react';
 import Router from 'next/router'
+import Metadatas from '../../../data'
+import useLocale from '../../../use-locale'
 
 const TabPane = Tabs.TabPane;
 
-const tabbarData = [
-  {
-    "name": "guide",
-    "route": "guide",
-    "children": []
-  },
-  {
-    "name": "components",
-    "route": "components",
-    "children": []
-  },
-  {
-    "name": "customization",
-    "route": "guide/themes",
-    "children": []
-  }
-]
-
 const MenuSticker = () => {
+  const { locale } = useLocale()
+
+  const tabbarData = useMemo(() => Metadatas[locale], [locale])
 
   const handleChange = (key: string) => {
     const defaultPath = `/en-us/${key}`
     Router.push(defaultPath)
   }
 
-
   return (
     <>
       <nav>
         <div className="sticker">
           <div className='inner'>
-            <Tabs defaultActiveTab='1' onChange={handleChange}>
-              <TabPane key='' title='Home' />
+            <Tabs defaultActiveTab='1' onChange={handleChange} className='inner-tabs'>
+              <TabPane key='' title='home' />
               {
                 tabbarData
                   ? tabbarData.map((tab: any, index: any) => (
                     <TabPane
-                      title={tab.name}
-                      key={tab.route}
+                      title={tab.localeName || tab.name}
+                      key={tab.localeName || tab.name}
                     />
                   ))
                   : null
@@ -55,7 +41,7 @@ const MenuSticker = () => {
         nav {
           position: relative;
           width: 100%;
-          height: 48px;
+          height: 50px;
           background-color: #fff;
         }
 
@@ -81,7 +67,7 @@ const MenuSticker = () => {
           height: 1px;
           left: 0;
           right: 0;
-          bottom: 8px;
+          bottom: 7px;
           background-color: #eaeaea;
         }
 
@@ -93,6 +79,15 @@ const MenuSticker = () => {
           margin: 0 auto;
         }
 
+        :global(.inner-tabs .arco-tabs-header-nav:before){
+          height: 0;
+        }
+
+        :global(.inner-tabs .arco-tabs-header-title){
+          font-size: 1rem;
+          text-transform: capitalize;
+        }
+        
       `}</style>
     </>
   )

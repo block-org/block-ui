@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-// import Sidebar from './sidebar'
+import Sidebar from './sidebar'
 import PageHeader from './header'
-
 
 export interface Meta {
   title: string
@@ -41,7 +40,7 @@ export const Layout: React.FC<React.PropsWithChildren<Props>> = React.memo(
       <div className="layout">
         <PageHeader meta={meta} />
         <aside className="sidebar">
-          {/* <Sidebar /> */}
+          <Sidebar />
         </aside>
         <div className="side-shadow" />
         <main className="main">
@@ -49,10 +48,11 @@ export const Layout: React.FC<React.PropsWithChildren<Props>> = React.memo(
         </main>
         <style jsx>{`
           .layout {
-            min-height: calc(100vh - 108px);
+            min-height: calc(100vh - 80px);
             max-width: ${defaultLayout.pageWidthWithMargin};
             margin: 0 auto;
             padding: 0 ${defaultLayout.gap};
+            padding-left: 28pt;
             display: flex;
             box-sizing: border-box;
           }
@@ -63,7 +63,7 @@ export const Layout: React.FC<React.PropsWithChildren<Props>> = React.memo(
             -webkit-flex-shrink: 0;
             height: calc(100% - 2rem - 140px + ${false ? '60px' : 0});
             position: fixed;
-            top: 140px;
+            top: 120px;
             bottom: 2rem;
             transform: translateY(${false ? '-60px' : 0});
             transition: transform 200ms ease-out;
@@ -72,7 +72,7 @@ export const Layout: React.FC<React.PropsWithChildren<Props>> = React.memo(
           .side-shadow {
             width: 220px;
             flex-shrink: 0;
-            height: 100vh;
+            height: 80vh;
           }
           .main {
             display: flex;
