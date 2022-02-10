@@ -2,8 +2,8 @@
   "name": "@block-org/static-pc-site",
   "version": "0.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run collect-meta && next dev",
+    "build": "npm run collect-meta && next build",
     "start": "next start",
     "lint": "next lint",
     "collect-meta": "node ../scripts/collect-meta.js"
