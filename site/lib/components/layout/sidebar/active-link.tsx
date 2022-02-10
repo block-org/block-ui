@@ -22,6 +22,7 @@ const ActiveLink: React.FC<Props> = React.memo(({ href, text }) => {
     },
     [text]
   )
+  
   const isActive = pathname === href
 
   return (
@@ -53,8 +54,8 @@ const ActiveLink: React.FC<Props> = React.memo(({ href, text }) => {
         }
 
         .link.active {
-          color: #0070f3;
-          font-weight: 600;
+          color: rgb(22,93,255);
+          // font-weight: 600;x
         }
 
         .link.active span {
