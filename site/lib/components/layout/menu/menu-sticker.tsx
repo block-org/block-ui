@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react'
+// todo
 import { Tabs, Typography } from '@arco-design/web-react';
 import Router, { useRouter } from 'next/router'
 import Metadatas from '../../../data'
@@ -100,10 +101,12 @@ const MenuSticker = () => {
           margin: 0 auto;
         }
 
+        // todo
         :global(.inner-tabs .arco-tabs-header-nav:before){
           height: 0;
         }
 
+        // todo
         :global(.inner-tabs .arco-tabs-header-title){
           font-size: 1rem;
           text-transform: capitalize;

@@ -1,0 +1,35 @@
+import Layout from '../../../lib/components/layout';
+// import { Alert } from '../../../../esm';
+// todo
+import { Alert } from '@arco-design/web-react';
+
+export const meta = {
+  title: 'Alert',
+  group: 'General',
+};
+
+## Alert
+
+Use `banner = true` to display Alert as a banner on top of the page.
+
+<div>
+  <Alert
+    banner
+    type="info"
+    showIcon
+    content="General text"
+    style={{ marginTop: 4, marginBottom: 20 }}
+  />
+  <Alert banner type="info" showIcon closable content="General text" style={{ marginBottom: 20 }} />
+  <Alert
+    banner
+    type="info"
+    showIcon
+    title="General text"
+    content="Here is an example text"
+    style={{ marginBottom: 20 }}
+  />
+  <Alert banner type="success" showIcon title="Success text" style={{ marginBottom: 20 }} />
+</div>
+
+export default ({ children }) => <Layout meta={meta}>{children}</Layout>;
