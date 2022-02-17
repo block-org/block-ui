@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
+    "new": "plop --plopfile ./scripts/plopfile.js",
     "init": "./scripts/init.sh",
     "clean": "rimraf lib esm dist",
     "build:umd": "block-scripts build:component:umd",
@@ -112,6 +113,7 @@
     "inquirer": "^8.2.0",
     "lint-staged": "^12.0.2",
     "nunjucks": "^3.2.2",
+    "plop": "^2.6.0",
     "postcss-less": "4.0.1",
     "prettier": "^2.5.0",
     "pretty-quick": "^3.1.2",
